@@ -1,0 +1,39 @@
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import "variables"; 
+@import "pages/_welcome.scss"; 
+@import "pages/_home.scss"; 
+
+
+* {
+  box-sizing: border-box; 
+
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-height: 50vh; 
+  background: rgb(23,35,104);
+  background: linear-gradient(159deg, rgba(23,35,104,1) 0%, rgba(226,73,175,1) 50%);
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  width: 100%; 
+  max-width: 1400px;  
+  background: #fff; 
+  height: 1200px; 
+  border-radius: 5px; 
+  display: grid; 
+  grid-template-columns: 15% 65% 20%;
+  overflow: hidden; 
+
+
+input:focus,
+select:focus, 
+textarea:focus, 
+button:focus {
+  outline: none; 
+}}

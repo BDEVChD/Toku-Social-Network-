@@ -1,0 +1,74 @@
+.app-container.welcome-page{
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;
+
+    .welcome-message{
+        background: white; 
+        h1{
+            font-size: 3rem;
+            font-weight: 100;
+            margin-bottom: 1rem;
+            text-transform: capitalize;
+            padding: 20px; 
+        }
+        h3{
+            font-size: 1.2rem; 
+            font-weight: 100;
+            margin-bottom: 1rem;
+            text-transform: capitalize;
+            text-align: center;
+        }
+    }
+    .home-container{
+        background: white; 
+        height: 100%; 
+        max-width: 400px;
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .login-buttons{
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            .button{
+                padding: 15px;
+                display: flex;
+                width: 250px; 
+                align-items: center;
+                justify-content: center;
+                color: white; 
+                margin-bottom: 10px;
+                transition: all .5s ease-in-out; 
+                cursor: pointer; 
+            }
+            .google-btn{
+                background:#dd4b39;
+                &:hover{
+                    background:black;
+                    color:white;  
+                    
+                }
+            }
+            .facebook-btn{
+                background: #3b5998;
+                color: white; 
+                &:hover{
+                    background:black;
+                    color:white;  
+                    
+                }
+            }
+            .email-btn{
+                // background: green; 
+                color: black; 
+                border: 1px solid black; 
+            }
+            hr{
+                height: 2px; 
+                width: 100%; 
+            }
+        }
+    }
+}

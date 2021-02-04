@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello Adonis</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+  <div class="app-container
+    @!section('current-class')
+  ">
+    <section id="left-menu">
+      <div class="account-dropdown">
+        <div class="logo">
+          <i class="fab fa-typo3"></i>
+        </div>
+        <div class="name">
+          Christopher
+          Duran
+        </div>
+        <div class="icon">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+
+      </div>
+      <div class="groups">
+        <div class="group">
+          <div class="title">Favorites</div>
+          <ul>
+            <li>
+              <div class="iconside"><i class="fab fa-500px"></i></div>
+              <div class="textside">Muzli</div>
+          
+            </li>
+            <li>Fubiz</li>
+            <li>Dribbble</li>
+          </ul>
+        </div>
+
+        <div class="group">
+          <div class="title">Pages(54)</div>
+          <ul>
+            <li>Awards</li>
+            <li>Interactive Designs</li>
+            <li>InVision</li>
+            <li>Mashable</li>
+          </ul>
+        </div>
+
+        <div class="group">
+          <div class="title">Groups(32) </div>
+          <ul>
+            <li>Startup Stadium</li>
+            <li>Designers Guild</li>
+            <li>UX/UI</li>
+            <li>Buy and Sell</li>
+          </ul>
+        </div>
+
+        <div class="group">
+          <div class="title">Birthdays(9) </div>
+            <div class="socialicons">
+              <i class="fab fa-adn" style="background: red; font-size: 30px; display: inline;"></i></li>
+              <i class="fab fa-adn" style="background: red; font-size: 30px; display: inline;"></i></li>
+              <i class="fab fa-adn" style="background: red; font-size: 30px; display: inline;"></i></li>
+           
+            </div>
+        </div>
+      </div>
+
+
+    </section>
+    <section id="content-container">
+      <div class="search-header">
+        <div class="content-area">        
+          <div class="search-box">
+            <input type="text">
+            <div class="icon-section">
+              <div class="noti">
+                <i class="fas fa-bell"></i>
+                <div class="noti-number active">
+                  31
+                </div>
+                
+              </div>
+              <div class="comments">
+                <i class="fas fa-comment"></i>
+                <div class="noti-number active">
+                  13
+                </div>
+              </div>
+              <div class="user">        
+                <i class="fas fa-user"></i>
+                <div class="noti-number active">
+                  3
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>   
+        
+      </div>
+      @!section('content-area')
+      {{--  <div class="testersec"> 
+
+      <section class="compose-section">
+        <textarea name="name" rows="8" cols="80"></textarea>
+        <div class="user-img"></div>
+        <div class="buttons">
+          <div class="button photo-btn">
+            <i class="fas fa-camera-retro"></i>
+          </div>
+          <div class="button video-btn">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="button send-btn" style="background: #1E88F4;">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+        </div>     
+      </section>
+      <section id="updates">
+        <div class="update-container">
+          
+          <div class="author-info">
+            <a href="#" class="user-img"></a>
+            <div class="info">
+              <a href="#">James Doe </a>shared a <a href="#">story</a>
+            
+            </div>
+          </div>
+          <div class="media">
+            <div class="image" style="background: url('https://res.cloudinary.com/practicaldev/image/fetch/s--lgZmvJZg--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q8novxdgkl806no68265.jpg'); background-position: center center; 
+            background-repeat: no-repeat; 
+            background-size: cover;  "></div>
+          </div>
+          <div class="grey-container">
+            <div class="update-info">
+              <h3>How to become a developer</h3>
+              <p>
+                DIY wayfarers pinterest salvia plaid, hella ethical drinking vinegar slow-carb sustainable. Crucifix master cleanse quinoa godard.
+              </p>
+            </div>
+            <div class="update-stats">
+              <div class="icon-section">
+                <div class="like-circle">
+                  <i class="fas fa-thumbs-up"></i>
+                </div>
+              </div>
+              <div class="other-users">Sarah Russell and 23 others liked update</div>
+              <div class="comments-stats">4 comments</div>
+            </div>
+            <div class="compose-comment">
+              <i class="fas fa-comment"></i>
+              <textarea name="" rows="8" cols="70"></textarea>
+              <div class="buttons">
+                <div class="repost-btn"><i class="fas fa-redo"></i></div>
+                <div class="like-btn"> <i class="fas fa-thumbs-up"></i></div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="update-container">
+          <div class="author-info">
+            <a href="#" class="user-img"></a>
+            <div class="info">
+              <a href="#">James Doe </a>shared a <a href="#">story</a>
+            
+            </div>
+          </div>
+          <div class="media">
+            <div class="image" style="background: url('https://res.cloudinary.com/practicaldev/image/fetch/s--lgZmvJZg--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q8novxdgkl806no68265.jpg'); background-position: center center; 
+            background-repeat: no-repeat; 
+            background-size: cover;  "></div>
+          </div>
+          <div class="grey-container">
+            <div class="update-info">
+              <h3>How to become a developer</h3>
+              <p>
+                DIY wayfarers pinterest salvia plaid, hella ethical drinking vinegar slow-carb sustainable. Crucifix master cleanse quinoa godard.
+              </p>
+            </div>
+            <div class="update-stats">
+              <div class="icon-section">
+                <div class="like-circle">
+                  <i class="fas fa-thumbs-up"></i>
+                </div>
+              </div>
+              <div class="other-users">Sarah Russell and 23 others liked update</div>
+              <div class="comments-stats">4 comments</div>
+            </div>
+            <div class="compose-comment">
+              <i class="fas fa-comment"></i>
+              <textarea name="" rows="8" cols="70"></textarea>
+              <div class="buttons">
+                <div class="repost-btn"><i class="fas fa-redo"></i></div>
+                <div class="like-btn"> <i class="fas fa-thumbs-up"></i></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="update-container">
+            <div class="author-info">
+              <a href="#" class="user-img"></a>
+              <div class="info">
+                <a href="#">James Doe </a>shared a <a href="#">story</a>
+              
+              </div>
+            </div>
+            <div class="media">
+              <div class="image" style="background: url('https://res.cloudinary.com/practicaldev/image/fetch/s--lgZmvJZg--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q8novxdgkl806no68265.jpg'); background-position: center center; 
+              background-repeat: no-repeat; 
+              background-size: cover;  "></div>
+            </div>
+            <div class="grey-container">
+              <div class="update-info">
+                <h3>How to become a developer</h3>
+                <p>
+                  DIY wayfarers pinterest salvia plaid, hella ethical drinking vinegar slow-carb sustainable. Crucifix master cleanse quinoa godard.
+                </p>
+              </div>
+              <div class="update-stats">
+                <div class="icon-section">
+                  <div class="like-circle">
+                    <i class="fas fa-thumbs-up"></i>
+                  </div>
+                </div>
+                <div class="other-users">Sarah Russell and 23 others liked update</div>
+                <div class="comments-stats">4 comments</div>
+              </div>
+              <div class="compose-comment">
+                <i class="fas fa-comment"></i>
+                <textarea name="" rows="8" cols="70"></textarea>
+                <div class="buttons">
+                  <div class="repost-btn"><i class="fas fa-redo"></i></div>
+                  <div class="like-btn"> <i class="fas fa-thumbs-up"></i></div>
+                </div>
+              </div>
+            </div>
+      </section>
+
+    </div>   --}}
+    </section>
+    <section id="messenger">
+      <div class="messenger-header">
+        <div class="messenger-icon">
+          <i class="fas fa-comments"></i>
+        </div>
+        <div class="title">
+          Messenger
+        </div>
+        <div class="options-icon">
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+      </div>
+      <div class="users">
+        <div class="users-container">
+        <div class="user" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+        <div class="user active" style="display: flex; align-items: center; padding: 10px; ">
+          <div class="user-img" style="background: url('https://randomuser.me/api/portraits/men/97.jpg');
+          background-position: center center; 
+          background-repeat: no-repeat; 
+          background-size: cover; 
+          position: relative; 
+          border-radius: 50%; 
+          height: 30px; 
+          width: 30px;"></div>
+          <div class="user-name">James Doe</div>
+          <div class="conversation">  <i class="fas fa-comment-dots"></i></div>
+        </div>
+      </div>
+      </div>
+      <div class="search">
+        <input type="text">
+      </div>
+     </section>
+  </div>
+  <script src="/js/components/vendor.js"></script>
+  <script src="/js/components/firstComp.js"></script>
+</body>
+</html>
