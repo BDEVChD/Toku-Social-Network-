@@ -13,7 +13,7 @@ This is the fullstack boilerplate for AdonisJs, it comes pre-configured with.
 
 ## Setup
 
-Use the adonis command to install the blueprint
+Use the adonis command to install the blueprints
 
 ```bash
 adonis new yardstick
