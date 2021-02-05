@@ -1,7 +1,7 @@
-.app-container.register-page{
+.app-container.auth-page{
     display: grid; 
     grid-template-columns: 1fr 1fr;
-    
+   
     h1{
         font-family: 'Galada', cursive;
         font-size: 3rem;
@@ -10,7 +10,7 @@
         margin-bottom: 1.2rem; 
        
     }
-    .register-form{
+    .auth-form{
         display: flex; 
         justify-content: center;
         flex-direction: column;
@@ -41,4 +41,5 @@
         height: 100%; 
         background-image: url('https://images.pexels.com/photos/40525/pexels-photo-40525.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     }
+
 }

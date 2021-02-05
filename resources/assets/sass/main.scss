@@ -3,9 +3,8 @@
 @import "variables"; 
 @import "pages/_welcome.scss"; 
 @import "pages/_home.scss"; 
-@import "auth/_forgotPassword.scss"; 
-@import "auth/_login.scss"; 
-@import "auth/register"; 
+@import "auth/_auth.scss";
+ 
 
 
 * {
@@ -88,3 +87,17 @@ text-transform: uppercase;
   
   }
 }
+
+
+
+
+
+.icon-section  {
+  .noti, .comments, .user {
+  position: relative; 
+  right: 700px; 
+
+  }
+}
+
+

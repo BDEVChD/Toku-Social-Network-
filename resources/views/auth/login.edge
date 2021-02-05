@@ -2,13 +2,13 @@
 @layout('layouts/empty')
 
 @section('title')
-Toku - Register
+Toku - Login
 @endsection
 
 @section('current-class')
 
 
-register-page
+auth-page
 
 @endsection
 
@@ -20,7 +20,38 @@ register-page
 @endsection
 
 @section('content')
+<div class="container">
 
+
+    
+    <div class="auth-form">
+        <h1>Toku</h1>
+        <form action="/login" method="POST" class="default-form">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" value="" class="text">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" value="" class="text">
+            </div>
+           
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+            <hr>
+            <a href="/forgot-password">I forgot password</a>
+        </form>
+        
+    </div>
+    
+
+</div>
+
+<div class="side-image">
+
+        
+</div>
 
 
 @endsection
