@@ -1,40 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Hello Adonis</title>
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
-</head>
-<body>
-  <div class="app-container
-  welcome-page
+@layout('layouts/empty')
 
-  " style="background:url('https://i.pinimg.com/originals/67/72/3a/67723afa77f4b7ab401e4e24ac58f140.png'); background-size: cover; background-position: center center; background-repeat: none;">
-  <div class="welcome-message">
-    <h1>Welcome to Toku</h1>
-    <h3>The dream social network </h3>
-  </div>
-  <div class="home-container">
-    <div class="box">
-      <div class="login-buttons">
-        <div class="button google-btn">
-          Google
-        </div>
-        <div class="button facebook-btn">
-          Facebook
-        </div>
-        <hr>
-        <div class="button email-btn">
-          Email
-        </div>
+@section('title')
+
+Toku - Social Network 
+
+
+@endsection
+
+@section('current-class')
+
+
+welcome-page
+
+@endsection
+
+
+@section('custom-style-app-container')
+
+background:url('https://i.pinimg.com/originals/67/72/3a/67723afa77f4b7ab401e4e24ac58f140.png'); background-size: cover; background-position: center center; background-repeat: none;
+
+@endsection
+
+@section('content')
+
+<div class="welcome-message">
+  <h1>Welcome to Toku</h1>
+  <h3>The dream social network </h3>
+</div>
+<div class="home-container">
+  <div class="box">
+    <div class="login-buttons">
+      <div class="button google-btn">
+        Google
+      </div>
+      <div class="button facebook-btn">
+        Facebook
+      </div>
+      <hr>
+      <div class="button email-btn">
+        Email
       </div>
     </div>
   </div>
-  
-  </div>
-  <script src="/js/components/vendor.js"></script>
-  <script src="/js/components/firstComp.js"></script>
-</body>
-</html>
+</div>
+
+
+
+
+@endsection

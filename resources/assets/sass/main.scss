@@ -3,6 +3,9 @@
 @import "variables"; 
 @import "pages/_welcome.scss"; 
 @import "pages/_home.scss"; 
+@import "auth/_forgotPassword.scss"; 
+@import "auth/_login.scss"; 
+@import "auth/register"; 
 
 
 * {
@@ -37,3 +40,51 @@ textarea:focus,
 button:focus {
   outline: none; 
 }}
+
+
+label{
+  font-size: .8rem; 
+  font-weight: 600; 
+  margin-bottom: 1rem; 
+  display: block; 
+}
+
+
+input[type="text"], 
+input.text{
+  width: 100%; 
+  background: #F3F3F3;
+  width: 100%; 
+  border-radius: 3px; 
+  font-size: 1.2rem; 
+  padding: 5px 15px;  
+  border: 1px solid white;  
+  margin-bottom: 1rem; 
+}
+
+
+textarea{
+  width: 100%; 
+  background: #F3F3F3; 
+  border: none; 
+  border-radius: 4px; 
+}
+
+.default-form{
+  button{
+    width: 100%; 
+    min-width: 200px;
+    color: white; 
+    font-weight: 300;
+    border-radius: 4px;
+    padding: 10px; 
+    -webkit-box-shadow: 5px 5px 18px -1px rgba(0,0,0,0.39); 
+    box-shadow: 5px 5px 18px -1px rgba(0,0,0,0.39);
+    background: #32ADFF;
+background: -webkit-linear-gradient(bottom, #32ADFF, #9AC5E3);
+background: -moz-linear-gradient(bottom, #32ADFF, #9AC5E3);
+background: linear-gradient(to top, #32ADFF, #9AC5E3);
+text-transform: uppercase;
+  
+  }
+}

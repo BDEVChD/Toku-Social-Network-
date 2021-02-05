@@ -9,6 +9,8 @@ class PageController {
     async welcome({response, request, view}){
         return view.render('pages/welcome')
     }
+    /**authentication */
+   
 }
 
 module.exports = PageController
