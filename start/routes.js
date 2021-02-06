@@ -18,13 +18,16 @@ const Route = use('Route')
 
 
 Route.get('/', 'PageController.welcome')
-Route.get('/home', 'PageController.home')
+Route.get('/home', 'PageController.home').middleware(['auth'])
 
 
 Route.get('/login', 'AuthController.login')
-Route.post('/login', 'AuthController.checkUser')
+Route.post('/login', 'AuthController.loginUser')
 
 Route.get('/register', 'AuthController.register')
 Route.post('/register', 'AuthController.storeUser')
 
 Route.get('/forgotpassword', 'AuthController.forgotpassword')
+
+
+Route.get('/logout', 'AuthController.logout')

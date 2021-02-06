@@ -106,7 +106,25 @@ text-transform: uppercase;
 }
 
 
+.notification{
+  display: none; 
+  &.active{
+    display: block; 
+    
+      &.welcome{
+        background: green; 
+      position: fixed; 
+      top: 20px; 
+      right: 20px; 
+      padding: 20px; 
+      z-index: 100; 
+        
+      }
 
+    
+  }
+  
+}
 
 
 // .icon-section  {
