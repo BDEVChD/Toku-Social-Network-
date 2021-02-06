@@ -1,6 +1,7 @@
 'use strict'
 
 /** @type {import('@adonisjs/lucid/src/Schema')} */
+//new comment
 const Schema = use('Schema')
 
 class RoleUserSchema extends Schema {
