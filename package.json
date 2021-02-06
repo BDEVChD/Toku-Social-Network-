@@ -1,8 +1,8 @@
 {
-  "name": "adonis",
+  "name": "toku",
   "version": "4.1.0",
   "adonis-version": "4.1.0",
-  "description": "The fullstack application boilerplate for Adonisjs",
+  "description": "This is a social network built with Adonis JS",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -36,6 +36,7 @@
     "@adonisjs/lucid": "^6.1.3",
     "@adonisjs/session": "^1.0.27",
     "@adonisjs/shield": "^1.0.8",
+    "@adonisjs/validator": "^5.0.6",
     "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",

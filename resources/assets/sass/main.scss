@@ -70,7 +70,24 @@ textarea{
 }
 
 .default-form{
+  .error-box{
+    display: none; 
+    background: red; 
+    color: white; 
+    padding: 15px; 
+
+    &.active{
+      display: block; 
+    }
+
+  }
+  .form-group{
+    & > .error{
+      border: 1px solid red; 
+    }
+  }
   button{
+    cursor: pointer; 
     width: 100%; 
     min-width: 200px;
     color: white; 
@@ -92,12 +109,12 @@ text-transform: uppercase;
 
 
 
-.icon-section  {
-  .noti, .comments, .user {
-  position: relative; 
-  right: 700px; 
+// .icon-section  {
+//   .noti, .comments, .user {
+//   position: relative; 
+//   right: 700px; 
 
-  }
-}
+//   }
+// }
 
 
