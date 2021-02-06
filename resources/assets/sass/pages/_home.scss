@@ -79,44 +79,50 @@
      
     
       .search-header {
+        
         padding: 10px; 
         box-shadow: 0px 2px 66px -16px rgba(0,0,0,0.75);
     -webkit-box-shadow: 0px 2px 66px -16px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 2px 66px -16px rgba(0,0,0,0.75);
-    input[type="text"]{
-      margin-bottom: 0; 
+    .search-box{
+      width: 650px;
+      display:inline-block; 
+      margin: 5px 7px; 
+      margin-left: 128px; 
+      input[type="text"]{
+        margin-bottom: 0; 
+      }
+      
     }
     
+    
        
-        .search-box{
-          width: 600px;
-          margin: 0 auto; 
-          
-          
-        }
+        
         .icon-section {
-            position: fixed; 
-            top: 8px;
-            right: 0;    
+          
+            display:inline-block; 
+            margin-left:-8px;
             font-size: 1.2rem; 
-            padding: 10px; 
-            margin-right: 10px; 
+            padding-top: 6px; 
+            position: absolute; 
+            top: 14px;
+
+      
             & > div {
               display: inline-block;
-              padding: 0 4px; 
+              padding: 0 3px; 
               opacity: .5;
-              position: relative; 
-              right: 700px; 
+            
             }
             
             .noti-number{
               display: none; 
-              position: absolute; 
+              position: relative; 
               background: #FF3658; 
               color: white; 
               font-size: .6rem; 
-              top: -10px; 
-              right: -4px; 
+              top: -30px; 
+              right: -10px; 
               padding: 2px 3px; 
               border: 1px solid white; 
               border-radius: 50%;  
