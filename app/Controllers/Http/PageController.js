@@ -3,7 +3,15 @@
 class PageController {
 
     async home({response, request, view, auth}){
-        return view.render('pages/react')
+
+        if(auth.user) {
+            return view.render('pages/react')
+        }
+        else {
+            return view.render('pages/welcome')
+        }
+
+        
        
     }
 
