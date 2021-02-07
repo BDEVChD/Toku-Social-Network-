@@ -7,7 +7,7 @@ class PostsSchema extends Schema {
   up () {
     this.create('posts', (table) => {
       table.increments()
-      table.text('description')
+      table.text('content')
       table.string('type').notNullable()
       table.string('image_url', 600).nullable()
       table.integer('user_id').unsigned().references('id').inTable('users')

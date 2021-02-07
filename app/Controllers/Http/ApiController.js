@@ -2,7 +2,10 @@
 
 class ApiController {
     async initialApp ({auth}) {
-        return auth.user
+        return {
+        userInfo: auth.user, 
+        latestPost:'', 
+        }
     }
 }
 

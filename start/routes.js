@@ -34,6 +34,6 @@ Route.get('/logout', 'AuthController.logout')
 
 //api 
 Route.get('/api/initialApp', 'ApiController.initialApp')
-
-//post
-Route.get('/api/post', 'PostController.store')
+Route.post('/api/post', 'PostController.store')
+Route.post('/api/post/:id', 'PostController.update')
+Route.get('/api/post/:id/delete', 'PostController.destroy')

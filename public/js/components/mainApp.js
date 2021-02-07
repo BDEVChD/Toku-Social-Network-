@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 294:
+/***/ 296:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9,6 +9,14 @@ webpackJsonp([0],{
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _regenerator = __webpack_require__(191);
+
+var _regenerator2 = _interopRequireDefault(_regenerator);
+
+var _asyncToGenerator2 = __webpack_require__(190);
+
+var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
 var _classCallCheck2 = __webpack_require__(57);
 
@@ -34,19 +42,56 @@ var _reactDom = __webpack_require__(44);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _axios = __webpack_require__(189);
+
+var _axios2 = _interopRequireDefault(_axios);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ComposeSection = function (_Component) {
   (0, _inherits3.default)(ComposeSection, _Component);
 
   function ComposeSection() {
+    var _this2 = this;
+
     (0, _classCallCheck3.default)(this, ComposeSection);
 
     var _this = (0, _possibleConstructorReturn3.default)(this, (ComposeSection.__proto__ || Object.getPrototypeOf(ComposeSection)).call(this));
 
-    _this.clickedBtn = function () {
-      console.log('swag');
-    };
+    _this.submitForm = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
+      var post;
+      return _regenerator2.default.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.prev = 0;
+              _context.next = 3;
+              return _axios2.default.post('/api/post', {
+                content: 'Hey I came from Clador',
+                user_id: 1,
+                type: 'text'
+              });
+
+            case 3:
+              post = _context.sent;
+
+              console.log(post);
+              _context.next = 10;
+              break;
+
+            case 7:
+              _context.prev = 7;
+              _context.t0 = _context['catch'](0);
+
+              console.log(_context.t0);
+
+            case 10:
+            case 'end':
+              return _context.stop();
+          }
+        }
+      }, _callee, _this2, [[0, 7]]);
+    }));
 
     _this.state = {
       name: 'Joe'
@@ -77,7 +122,7 @@ var ComposeSection = function (_Component) {
           ),
           _react2.default.createElement(
             'div',
-            { className: 'button send-btn' },
+            { className: 'button send-btn', onClick: this.submitForm },
             _react2.default.createElement('i', { className: 'fas fa-paper-plane' })
           )
         )
@@ -91,7 +136,7 @@ exports.default = ComposeSection;
 
 /***/ }),
 
-/***/ 295:
+/***/ 297:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -151,184 +196,196 @@ var LeftMenu = function (_Component) {
   (0, _createClass3.default)(LeftMenu, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(
-        'section',
-        { id: 'left-menu' },
-        _react2.default.createElement(
+      if (this.props.initialData.userInfo == undefined) {
+        return _react2.default.createElement(
           'div',
-          { className: 'account-dropdown' },
+          null,
+          'Loading'
+        );
+      } else {
+        var _props$initialData$us = this.props.initialData.userInfo,
+            first_name = _props$initialData$us.first_name,
+            last_name = _props$initialData$us.last_name;
+
+        return _react2.default.createElement(
+          'section',
+          { id: 'left-menu' },
           _react2.default.createElement(
             'div',
-            { className: 'logo' },
-            _react2.default.createElement('i', { className: 'fab fa-typo3' })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'name', onClick: this.clickedDropdown },
-            this.props.initialData.first_name + ' ' + this.props.initialData.last_name
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'icon', onClick: this.clickedDropdown },
-            _react2.default.createElement('i', { className: 'fas fa-chevron-down' })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'dropdown ' + (this.state.dropdown ? 'active' : '') },
+            { className: 'account-dropdown' },
             _react2.default.createElement(
-              'ul',
-              null,
+              'div',
+              { className: 'logo' },
+              _react2.default.createElement('i', { className: 'fab fa-typo3' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'name', onClick: this.clickedDropdown },
+              first_name + ' ' + last_name
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'icon', onClick: this.clickedDropdown },
+              _react2.default.createElement('i', { className: 'fas fa-chevron-down' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'dropdown ' + (this.state.dropdown ? 'active' : '') },
               _react2.default.createElement(
-                'nav',
+                'ul',
                 null,
                 _react2.default.createElement(
-                  'a',
-                  { href: '/account' },
-                  'account'
+                  'nav',
+                  null,
+                  _react2.default.createElement(
+                    'a',
+                    { href: '/account' },
+                    'account'
+                  ),
+                  _react2.default.createElement(
+                    'a',
+                    { href: '/logout' },
+                    'logout'
+                  )
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'groups' },
+            _react2.default.createElement(
+              'div',
+              { className: 'group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'title' },
+                'Favorites'
+              ),
+              _react2.default.createElement(
+                'ul',
+                null,
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    'a',
+                    { href: '/logout' },
+                    'Logout'
+                  )
+                ),
+                _react2.default.createElement('li', null),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'iconside' },
+                    _react2.default.createElement('i', { className: 'fab fa-500px' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'textside' },
+                    'Muzli'
+                  )
                 ),
                 _react2.default.createElement(
-                  'a',
-                  { href: '/logout' },
-                  'logout'
+                  'li',
+                  null,
+                  'Fubiz'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Dribbble'
                 )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'title' },
+                'Pages(54)'
+              ),
+              _react2.default.createElement(
+                'ul',
+                null,
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Awards'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Interactive Designs'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'InVision'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Mashable'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'title' },
+                'Groups(32) '
+              ),
+              _react2.default.createElement(
+                'ul',
+                null,
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Startup Stadium'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Designers Guild'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'UX/UI'
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  'Buy and Sell'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'group' },
+              _react2.default.createElement(
+                'div',
+                { className: 'title' },
+                'Birthdays(9) '
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'socialicons' },
+                _react2.default.createElement('i', { className: 'fab fa-adn', style: { background: 'red', fontSize: '30px', display: 'inline' } }),
+                _react2.default.createElement('i', { className: 'fab fa-adn', style: { background: 'red', fontSize: '30px', display: 'inline' } }),
+                _react2.default.createElement('i', { className: 'fab fa-adn', style: { background: 'red', fontSize: '30px', display: 'inline' } })
               )
             )
           )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'groups' },
-          _react2.default.createElement(
-            'div',
-            { className: 'group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'title' },
-              'Favorites'
-            ),
-            _react2.default.createElement(
-              'ul',
-              null,
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: '/logout' },
-                  'Logout'
-                )
-              ),
-              _react2.default.createElement('li', null),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { className: 'iconside' },
-                  _react2.default.createElement('i', { className: 'fab fa-500px' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'textside' },
-                  'Muzli'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Fubiz'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Dribbble'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'title' },
-              'Pages(54)'
-            ),
-            _react2.default.createElement(
-              'ul',
-              null,
-              _react2.default.createElement(
-                'li',
-                null,
-                'Awards'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Interactive Designs'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'InVision'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Mashable'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'title' },
-              'Groups(32) '
-            ),
-            _react2.default.createElement(
-              'ul',
-              null,
-              _react2.default.createElement(
-                'li',
-                null,
-                'Startup Stadium'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Designers Guild'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'UX/UI'
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                'Buy and Sell'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'group' },
-            _react2.default.createElement(
-              'div',
-              { className: 'title' },
-              'Birthdays(9) '
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'socialicons' },
-              _react2.default.createElement('i', { className: 'fab fa-adn', style: { background: 'red', fontSize: '30px', display: 'inline' } }),
-              _react2.default.createElement('i', { className: 'fab fa-adn', style: { background: 'red', fontSize: '30px', display: 'inline' } }),
-              _react2.default.createElement('i', { className: 'fab fa-adn', style: { background: 'red', fontSize: '30px', display: 'inline' } })
-            )
-          )
-        )
-      );
+        );
+      }
     }
   }]);
   return LeftMenu;
@@ -338,7 +395,7 @@ exports.default = LeftMenu;
 
 /***/ }),
 
-/***/ 296:
+/***/ 298:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -419,7 +476,7 @@ exports.default = LoadingComp;
 
 /***/ }),
 
-/***/ 297:
+/***/ 299:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -985,7 +1042,7 @@ exports.default = Messenger;
 
 /***/ }),
 
-/***/ 298:
+/***/ 300:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1328,7 +1385,7 @@ exports.default = Posts;
 
 /***/ }),
 
-/***/ 299:
+/***/ 301:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1447,11 +1504,11 @@ exports.default = SearchHeader;
 "use strict";
 
 
-var _regenerator = __webpack_require__(302);
+var _regenerator = __webpack_require__(191);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
-var _asyncToGenerator2 = __webpack_require__(301);
+var _asyncToGenerator2 = __webpack_require__(190);
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
@@ -1479,31 +1536,31 @@ var _reactDom = __webpack_require__(44);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _axios = __webpack_require__(293);
+var _axios = __webpack_require__(189);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _LeftMenu = __webpack_require__(295);
+var _LeftMenu = __webpack_require__(297);
 
 var _LeftMenu2 = _interopRequireDefault(_LeftMenu);
 
-var _Messenger = __webpack_require__(297);
+var _Messenger = __webpack_require__(299);
 
 var _Messenger2 = _interopRequireDefault(_Messenger);
 
-var _SearchHeader = __webpack_require__(299);
+var _SearchHeader = __webpack_require__(301);
 
 var _SearchHeader2 = _interopRequireDefault(_SearchHeader);
 
-var _ComposeSection = __webpack_require__(294);
+var _ComposeSection = __webpack_require__(296);
 
 var _ComposeSection2 = _interopRequireDefault(_ComposeSection);
 
-var _Posts = __webpack_require__(298);
+var _Posts = __webpack_require__(300);
 
 var _Posts2 = _interopRequireDefault(_Posts);
 
-var _LoadingComp = __webpack_require__(296);
+var _LoadingComp = __webpack_require__(298);
 
 var _LoadingComp2 = _interopRequireDefault(_LoadingComp);
 
