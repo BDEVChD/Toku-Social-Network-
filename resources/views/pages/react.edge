@@ -1,0 +1,44 @@
+@layout('layouts/app-react')
+
+@section('title')
+
+Toku - Social Network 
+
+
+@endsection
+
+
+@section('current-class')
+
+home-page
+
+
+@endsection
+
+@section('notifications')
+  <div class="notification welcome 
+    @if(flashMessage('notification'))
+      active
+    @endif
+  
+  ">
+    @if(flashMessage('notification'))
+      {{flashMessage('notification')}}
+    @endif  
+  </div>
+
+@endsection
+
+
+
+@section('content-area')
+<div id="app">
+
+
+
+
+    
+</div>
+
+
+@endsection
