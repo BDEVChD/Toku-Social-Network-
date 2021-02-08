@@ -1,11 +1,20 @@
 'use strict'
 
+const Post = use('App/Models/Post')
+
 class ApiController {
     async initialApp ({auth}) {
-        return {
-        userInfo: auth.user, 
-        latestPost:'', 
+        try{
+            const latestPosts = await Post.query().where('user_id', '=', 1).fetch()
+            return {
+                userInfo: auth.user, 
+                latestPost: latestPosts 
+                }
+
+        } catch(error){
+            console.log(error)
         }
+        
     }
 }
 

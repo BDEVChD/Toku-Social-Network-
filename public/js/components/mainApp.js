@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 296:
+/***/ 297:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17,6 +17,10 @@ var _regenerator2 = _interopRequireDefault(_regenerator);
 var _asyncToGenerator2 = __webpack_require__(190);
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
+
+var _defineProperty2 = __webpack_require__(330);
+
+var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
 var _classCallCheck2 = __webpack_require__(57);
 
@@ -58,6 +62,16 @@ var ComposeSection = function (_Component) {
 
     var _this = (0, _possibleConstructorReturn3.default)(this, (ComposeSection.__proto__ || Object.getPrototypeOf(ComposeSection)).call(this));
 
+    _this.handleChange = function (event) {
+
+      var name = event.target.name;
+      var value = event.target.type == 'checkbox' ? event.target.checked : event.target.value;
+
+      _this.setState((0, _defineProperty3.default)({}, name, value), function () {
+        console.log(_this.state);
+      });
+    };
+
     _this.submitForm = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
       var post;
       return _regenerator2.default.wrap(function _callee$(_context) {
@@ -67,8 +81,8 @@ var ComposeSection = function (_Component) {
               _context.prev = 0;
               _context.next = 3;
               return _axios2.default.post('/api/post', {
-                content: 'Hey I came from Clador',
-                user_id: 1,
+                content: _this.state.postContent,
+                user_id: _this.props.initialData.userInfo.id,
                 type: 'text'
               });
 
@@ -93,9 +107,7 @@ var ComposeSection = function (_Component) {
       }, _callee, _this2, [[0, 7]]);
     }));
 
-    _this.state = {
-      name: 'Joe'
-    };
+    _this.state = {};
     return _this;
   }
 
@@ -105,7 +117,7 @@ var ComposeSection = function (_Component) {
       return _react2.default.createElement(
         'section',
         { className: 'compose-section' },
-        _react2.default.createElement('textarea', { name: 'name', rows: 8, cols: 80, defaultValue: "" }),
+        _react2.default.createElement('textarea', { name: 'postContent', rows: 8, cols: 80, defaultValue: "", onChange: this.handleChange, value: this.state.postContent }),
         _react2.default.createElement('div', { className: 'user-img' }),
         _react2.default.createElement(
           'div',
@@ -136,7 +148,7 @@ exports.default = ComposeSection;
 
 /***/ }),
 
-/***/ 297:
+/***/ 298:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -395,7 +407,7 @@ exports.default = LeftMenu;
 
 /***/ }),
 
-/***/ 298:
+/***/ 299:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -476,7 +488,7 @@ exports.default = LoadingComp;
 
 /***/ }),
 
-/***/ 299:
+/***/ 300:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1042,7 +1054,7 @@ exports.default = Messenger;
 
 /***/ }),
 
-/***/ 300:
+/***/ 301:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1385,7 +1397,7 @@ exports.default = Posts;
 
 /***/ }),
 
-/***/ 301:
+/***/ 302:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1498,7 +1510,7 @@ exports.default = SearchHeader;
 
 /***/ }),
 
-/***/ 322:
+/***/ 323:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1540,27 +1552,27 @@ var _axios = __webpack_require__(189);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _LeftMenu = __webpack_require__(297);
+var _LeftMenu = __webpack_require__(298);
 
 var _LeftMenu2 = _interopRequireDefault(_LeftMenu);
 
-var _Messenger = __webpack_require__(299);
+var _Messenger = __webpack_require__(300);
 
 var _Messenger2 = _interopRequireDefault(_Messenger);
 
-var _SearchHeader = __webpack_require__(301);
+var _SearchHeader = __webpack_require__(302);
 
 var _SearchHeader2 = _interopRequireDefault(_SearchHeader);
 
-var _ComposeSection = __webpack_require__(296);
+var _ComposeSection = __webpack_require__(297);
 
 var _ComposeSection2 = _interopRequireDefault(_ComposeSection);
 
-var _Posts = __webpack_require__(300);
+var _Posts = __webpack_require__(301);
 
 var _Posts2 = _interopRequireDefault(_Posts);
 
-var _LoadingComp = __webpack_require__(298);
+var _LoadingComp = __webpack_require__(299);
 
 var _LoadingComp2 = _interopRequireDefault(_LoadingComp);
 
@@ -1648,7 +1660,7 @@ var Layout = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'testersec' },
-            _react2.default.createElement(_ComposeSection2.default, null),
+            _react2.default.createElement(_ComposeSection2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
             _react2.default.createElement(_Posts2.default, null)
           )
         ),
@@ -1665,4 +1677,4 @@ _reactDom2.default.render(_react2.default.createElement(Layout, null), app);
 
 /***/ })
 
-},[322]);
+},[323]);
