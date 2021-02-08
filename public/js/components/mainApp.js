@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 297:
+/***/ 132:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10,43 +10,43 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _regenerator = __webpack_require__(191);
+var _regenerator = __webpack_require__(199);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
-var _asyncToGenerator2 = __webpack_require__(190);
+var _asyncToGenerator2 = __webpack_require__(198);
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
-var _defineProperty2 = __webpack_require__(330);
+var _defineProperty2 = __webpack_require__(339);
 
 var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
-var _classCallCheck2 = __webpack_require__(57);
+var _classCallCheck2 = __webpack_require__(45);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(58);
+var _createClass2 = __webpack_require__(46);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(60);
+var _possibleConstructorReturn2 = __webpack_require__(48);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(59);
+var _inherits2 = __webpack_require__(47);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = __webpack_require__(43);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(44);
+var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _axios = __webpack_require__(189);
+var _axios = __webpack_require__(104);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -148,7 +148,7 @@ exports.default = ComposeSection;
 
 /***/ }),
 
-/***/ 298:
+/***/ 133:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -158,27 +158,301 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _classCallCheck2 = __webpack_require__(57);
+var _classCallCheck2 = __webpack_require__(45);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(58);
+var _createClass2 = __webpack_require__(46);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(60);
+var _possibleConstructorReturn2 = __webpack_require__(48);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(59);
+var _inherits2 = __webpack_require__(47);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = __webpack_require__(43);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(44);
+var _reactDom = __webpack_require__(32);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Posts = function (_Component) {
+  (0, _inherits3.default)(Posts, _Component);
+
+  function Posts() {
+    (0, _classCallCheck3.default)(this, Posts);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Posts.__proto__ || Object.getPrototypeOf(Posts)).call(this));
+
+    _this.clickedBtn = function () {
+      console.log('swag');
+    };
+
+    _this.showLatestPosts = function () {
+      if (_this.props.initialData.latestPosts != undefined) {
+
+        return _this.props.initialData.latestPosts.map(function (item, index) {
+          var post = item.posts;
+          var user = item.users;
+
+          return _react2.default.createElement(
+            'div',
+            { className: 'update-container', key: index },
+            _react2.default.createElement(
+              'div',
+              { className: 'author-info' },
+              _react2.default.createElement('a', { href: '#', className: 'user-img', style: { backgroundImage: 'url(\'' + user.profile_img + '\')' } }),
+              _react2.default.createElement(
+                'div',
+                { className: 'info', style: { position: 'relative', left: '10px' } },
+                _react2.default.createElement(
+                  'a',
+                  { href: '/profile' },
+                  user.first_name,
+                  ' ',
+                  _this.props.initialData.userInfo.last_name,
+                  ' '
+                ),
+                'shared a ',
+                _react2.default.createElement(
+                  'a',
+                  { href: '#' },
+                  post.type == 'text' ? 'story' : 'image'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'media' },
+              _react2.default.createElement('div', { className: '' + (post.type == 'text' ? 'story' : 'image'), style: { background: 'url("https://res.cloudinary.com/practicaldev/image/fetch/s--lgZmvJZg--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q8novxdgkl806no68265.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' } })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'grey-container' },
+              _react2.default.createElement(
+                'div',
+                { className: 'update-info' },
+                _react2.default.createElement(
+                  'h3',
+                  null,
+                  'How to become a developer'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  post.content
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'update-stats' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon-section' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'like-circle' },
+                    _react2.default.createElement('i', { className: 'fas fa-thumbs-up' })
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'other-users' },
+                  'Sarah Russell and 23 others liked update'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'comments-stats' },
+                  '4 comments'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'compose-comment' },
+                _react2.default.createElement('i', { className: 'fas fa-comment' }),
+                _react2.default.createElement('textarea', { name: true, rows: 8, cols: 70, defaultValue: "" }),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'buttons' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'repost-btn' },
+                    _react2.default.createElement('i', { className: 'fas fa-redo' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'like-btn' },
+                    ' ',
+                    _react2.default.createElement('i', { className: 'fas fa-thumbs-up' })
+                  )
+                )
+              )
+            )
+          );
+        });
+      }
+    };
+
+    _this.state = {
+      name: 'Joe'
+    };
+    return _this;
+  }
+
+  (0, _createClass3.default)(Posts, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'section',
+        { id: 'posts' },
+        this.showLatestPosts()
+      );
+    }
+  }]);
+  return Posts;
+}(_react.Component);
+
+exports.default = Posts;
+
+/***/ }),
+
+/***/ 306:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = __webpack_require__(45);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(46);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__(48);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(47);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = __webpack_require__(18);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(32);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactRouterDom = __webpack_require__(134);
+
+var _axios = __webpack_require__(104);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _ComposeSection = __webpack_require__(132);
+
+var _ComposeSection2 = _interopRequireDefault(_ComposeSection);
+
+var _Posts = __webpack_require__(133);
+
+var _Posts2 = _interopRequireDefault(_Posts);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Home = function (_Component) {
+  (0, _inherits3.default)(Home, _Component);
+
+  function Home() {
+    (0, _classCallCheck3.default)(this, Home);
+
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this));
+
+    _this.clickedBtn = function () {
+      console.log('swag');
+    };
+
+    _this.state = {
+      name: 'Joe'
+
+    };
+    return _this;
+  }
+
+  (0, _createClass3.default)(Home, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+
+      this.setState({
+        initialData: this.props.initialData
+      }, function () {
+        console.log(self.state);
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'testersec' },
+        _react2.default.createElement(_ComposeSection2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
+        _react2.default.createElement(_Posts2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData })
+      );
+    }
+  }]);
+  return Home;
+}(_react.Component);
+
+exports.default = Home;
+
+/***/ }),
+
+/***/ 307:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = __webpack_require__(45);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__(46);
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__(48);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(47);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _react = __webpack_require__(18);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -407,7 +681,7 @@ exports.default = LeftMenu;
 
 /***/ }),
 
-/***/ 299:
+/***/ 308:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -417,27 +691,27 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _classCallCheck2 = __webpack_require__(57);
+var _classCallCheck2 = __webpack_require__(45);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(58);
+var _createClass2 = __webpack_require__(46);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(60);
+var _possibleConstructorReturn2 = __webpack_require__(48);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(59);
+var _inherits2 = __webpack_require__(47);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = __webpack_require__(43);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(44);
+var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -488,7 +762,7 @@ exports.default = LoadingComp;
 
 /***/ }),
 
-/***/ 300:
+/***/ 309:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -498,27 +772,27 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _classCallCheck2 = __webpack_require__(57);
+var _classCallCheck2 = __webpack_require__(45);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(58);
+var _createClass2 = __webpack_require__(46);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(60);
+var _possibleConstructorReturn2 = __webpack_require__(48);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(59);
+var _inherits2 = __webpack_require__(47);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = __webpack_require__(43);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(44);
+var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1054,7 +1328,7 @@ exports.default = Messenger;
 
 /***/ }),
 
-/***/ 301:
+/***/ 310:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1064,173 +1338,90 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _classCallCheck2 = __webpack_require__(57);
+var _classCallCheck2 = __webpack_require__(45);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(58);
+var _createClass2 = __webpack_require__(46);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(60);
+var _possibleConstructorReturn2 = __webpack_require__(48);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(59);
+var _inherits2 = __webpack_require__(47);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = __webpack_require__(43);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(44);
+var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _reactRouterDom = __webpack_require__(134);
+
+var _axios = __webpack_require__(104);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _ComposeSection = __webpack_require__(132);
+
+var _ComposeSection2 = _interopRequireDefault(_ComposeSection);
+
+var _Posts = __webpack_require__(133);
+
+var _Posts2 = _interopRequireDefault(_Posts);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Posts = function (_Component) {
-  (0, _inherits3.default)(Posts, _Component);
+var Profile = function (_Component) {
+  (0, _inherits3.default)(Profile, _Component);
 
-  function Posts() {
-    (0, _classCallCheck3.default)(this, Posts);
+  function Profile() {
+    (0, _classCallCheck3.default)(this, Profile);
 
-    var _this = (0, _possibleConstructorReturn3.default)(this, (Posts.__proto__ || Object.getPrototypeOf(Posts)).call(this));
-
-    _this.clickedBtn = function () {
-      console.log('swag');
-    };
-
-    _this.showLatestPosts = function () {
-      if (_this.props.initialData.latestPosts != undefined) {
-
-        return _this.props.initialData.latestPosts.map(function (item) {
-          var post = item.posts;
-          var user = item.users;
-
-          return _react2.default.createElement(
-            'div',
-            { className: 'update-container' },
-            _react2.default.createElement(
-              'div',
-              { className: 'author-info' },
-              _react2.default.createElement('a', { href: '#', className: 'user-img', style: { backgroundImage: 'url(\'' + user.profile_img + '\')' } }),
-              _react2.default.createElement(
-                'div',
-                { className: 'info', style: { position: 'relative', left: '10px' } },
-                _react2.default.createElement(
-                  'a',
-                  { href: '/profile' },
-                  user.first_name,
-                  ' ',
-                  _this.props.initialData.userInfo.last_name,
-                  ' '
-                ),
-                'shared a ',
-                _react2.default.createElement(
-                  'a',
-                  { href: '#' },
-                  post.type == 'text' ? 'story' : 'image'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'media' },
-              _react2.default.createElement('div', { className: '' + (post.type == 'text' ? 'story' : 'image'), style: { background: 'url("https://res.cloudinary.com/practicaldev/image/fetch/s--lgZmvJZg--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q8novxdgkl806no68265.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' } })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'grey-container' },
-              _react2.default.createElement(
-                'div',
-                { className: 'update-info' },
-                _react2.default.createElement(
-                  'h3',
-                  null,
-                  'How to become a developer'
-                ),
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  post.content
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'update-stats' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'icon-section' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'like-circle' },
-                    _react2.default.createElement('i', { className: 'fas fa-thumbs-up' })
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'other-users' },
-                  'Sarah Russell and 23 others liked update'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'comments-stats' },
-                  '4 comments'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'compose-comment' },
-                _react2.default.createElement('i', { className: 'fas fa-comment' }),
-                _react2.default.createElement('textarea', { name: true, rows: 8, cols: 70, defaultValue: "" }),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'buttons' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'repost-btn' },
-                    _react2.default.createElement('i', { className: 'fas fa-redo' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'like-btn' },
-                    ' ',
-                    _react2.default.createElement('i', { className: 'fas fa-thumbs-up' })
-                  )
-                )
-              )
-            )
-          );
-        });
-      }
-    };
+    var _this = (0, _possibleConstructorReturn3.default)(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this));
 
     _this.state = {
       name: 'Joe'
+
     };
     return _this;
   }
 
-  (0, _createClass3.default)(Posts, [{
+  (0, _createClass3.default)(Profile, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+
+      this.setState({
+        initialData: this.props.initialData
+      }, function () {
+        console.log(self.state);
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
+
       return _react2.default.createElement(
-        'section',
-        { id: 'posts' },
-        this.showLatestPosts()
+        'div',
+        { className: 'testersec' },
+        'This is the users profile'
       );
     }
   }]);
-  return Posts;
+  return Profile;
 }(_react.Component);
 
-exports.default = Posts;
+exports.default = Profile;
 
 /***/ }),
 
-/***/ 302:
+/***/ 311:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1240,27 +1431,27 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _classCallCheck2 = __webpack_require__(57);
+var _classCallCheck2 = __webpack_require__(45);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(58);
+var _createClass2 = __webpack_require__(46);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(60);
+var _possibleConstructorReturn2 = __webpack_require__(48);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(59);
+var _inherits2 = __webpack_require__(47);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = __webpack_require__(43);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(44);
+var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1343,69 +1534,79 @@ exports.default = SearchHeader;
 
 /***/ }),
 
-/***/ 323:
+/***/ 332:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _regenerator = __webpack_require__(191);
+var _regenerator = __webpack_require__(199);
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
-var _asyncToGenerator2 = __webpack_require__(190);
+var _asyncToGenerator2 = __webpack_require__(198);
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 
-var _classCallCheck2 = __webpack_require__(57);
+var _classCallCheck2 = __webpack_require__(45);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(58);
+var _createClass2 = __webpack_require__(46);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _possibleConstructorReturn2 = __webpack_require__(60);
+var _possibleConstructorReturn2 = __webpack_require__(48);
 
 var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
 
-var _inherits2 = __webpack_require__(59);
+var _inherits2 = __webpack_require__(47);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _react = __webpack_require__(43);
+var _react = __webpack_require__(18);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(44);
+var _reactDom = __webpack_require__(32);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _axios = __webpack_require__(189);
+var _reactRouterDom = __webpack_require__(134);
+
+var _axios = __webpack_require__(104);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _LeftMenu = __webpack_require__(298);
+var _LeftMenu = __webpack_require__(307);
 
 var _LeftMenu2 = _interopRequireDefault(_LeftMenu);
 
-var _Messenger = __webpack_require__(300);
+var _Home = __webpack_require__(306);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _Messenger = __webpack_require__(309);
 
 var _Messenger2 = _interopRequireDefault(_Messenger);
 
-var _SearchHeader = __webpack_require__(302);
+var _Profile = __webpack_require__(310);
+
+var _Profile2 = _interopRequireDefault(_Profile);
+
+var _SearchHeader = __webpack_require__(311);
 
 var _SearchHeader2 = _interopRequireDefault(_SearchHeader);
 
-var _ComposeSection = __webpack_require__(297);
+var _ComposeSection = __webpack_require__(132);
 
 var _ComposeSection2 = _interopRequireDefault(_ComposeSection);
 
-var _Posts = __webpack_require__(301);
+var _Posts = __webpack_require__(133);
 
 var _Posts2 = _interopRequireDefault(_Posts);
 
-var _LoadingComp = __webpack_require__(299);
+var _LoadingComp = __webpack_require__(308);
 
 var _LoadingComp2 = _interopRequireDefault(_LoadingComp);
 
@@ -1481,23 +1682,32 @@ var Layout = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      var _this2 = this;
+
       return _react2.default.createElement(
-        'div',
-        { className: 'app-container home-page' },
-        _react2.default.createElement(_LoadingComp2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
-        _react2.default.createElement(_LeftMenu2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
+        _reactRouterDom.BrowserRouter,
+        null,
         _react2.default.createElement(
-          'section',
-          { id: 'content-container' },
-          _react2.default.createElement(_SearchHeader2.default, null),
+          'div',
+          { className: 'app-container home-page' },
+          _react2.default.createElement(_LoadingComp2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
+          _react2.default.createElement(_LeftMenu2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
           _react2.default.createElement(
-            'div',
-            { className: 'testersec' },
-            _react2.default.createElement(_ComposeSection2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
-            _react2.default.createElement(_Posts2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData })
-          )
-        ),
-        _react2.default.createElement(_Messenger2.default, null)
+            'section',
+            { id: 'content-container' },
+            _react2.default.createElement(_SearchHeader2.default, null),
+            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: function component(props) {
+                return _react2.default.createElement(_Home2.default, { routeProps: props,
+                  initialData: _this2.state.initialData == undefined ? 'loading' : _this2.state.initialData });
+              } }),
+            _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/profile', component: function component(props) {
+                return _react2.default.createElement(_Profile2.default, { routeProps: props,
+                  initialData: _this2.state.initialData == undefined ? 'loading' : _this2.state.initialData });
+              } }),
+            _react2.default.createElement('div', { className: 'testersec' })
+          ),
+          _react2.default.createElement(_Messenger2.default, null)
+        )
       );
     }
   }]);
@@ -1510,4 +1720,4 @@ _reactDom2.default.render(_react2.default.createElement(Layout, null), app);
 
 /***/ })
 
-},[323]);
+},[332]);
