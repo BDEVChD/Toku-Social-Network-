@@ -52,7 +52,7 @@ class Layout extends Component {
          <SearchHeader />
           <div className="testersec">
           <ComposeSection initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
-          <Posts />
+          <Posts initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
           </div>
         </section>
        <Messenger />

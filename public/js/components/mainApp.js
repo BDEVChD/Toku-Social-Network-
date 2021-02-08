@@ -1102,226 +1102,43 @@ var Posts = function (_Component) {
       console.log('swag');
     };
 
-    _this.state = {
-      name: 'Joe'
-    };
-    return _this;
-  }
+    _this.showLatestPosts = function () {
+      if (_this.props.initialData.latestPosts != undefined) {
 
-  (0, _createClass3.default)(Posts, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'section',
-        { id: 'posts' },
-        _react2.default.createElement(
-          'div',
-          { className: 'update-container' },
-          _react2.default.createElement(
-            'div',
-            { className: 'author-info' },
-            _react2.default.createElement('a', { href: '#', className: 'user-img' }),
-            _react2.default.createElement(
-              'div',
-              { className: 'info' },
-              _react2.default.createElement(
-                'a',
-                { href: '#' },
-                'James Doe '
-              ),
-              'shared a ',
-              _react2.default.createElement(
-                'a',
-                { href: '#' },
-                'story'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'media' },
-            _react2.default.createElement('div', { className: 'image', style: { background: 'url("https://res.cloudinary.com/practicaldev/image/fetch/s--lgZmvJZg--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q8novxdgkl806no68265.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' } })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'grey-container' },
-            _react2.default.createElement(
-              'div',
-              { className: 'update-info' },
-              _react2.default.createElement(
-                'h3',
-                null,
-                'How to become a developer'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'DIY wayfarers pinterest salvia plaid, hella ethical drinking vinegar slow-carb sustainable. Crucifix master cleanse quinoa godard.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'update-stats' },
-              _react2.default.createElement(
-                'div',
-                { className: 'icon-section' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'like-circle' },
-                  _react2.default.createElement('i', { className: 'fas fa-thumbs-up' })
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'other-users' },
-                'Sarah Russell and 23 others liked update'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'comments-stats' },
-                '4 comments'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'compose-comment' },
-              _react2.default.createElement('i', { className: 'fas fa-comment' }),
-              _react2.default.createElement('textarea', { name: true, rows: 8, cols: 70, defaultValue: "" }),
-              _react2.default.createElement(
-                'div',
-                { className: 'buttons' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'repost-btn' },
-                  _react2.default.createElement('i', { className: 'fas fa-redo' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'like-btn' },
-                  ' ',
-                  _react2.default.createElement('i', { className: 'fas fa-thumbs-up' })
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'update-container' },
-          _react2.default.createElement(
-            'div',
-            { className: 'author-info' },
-            _react2.default.createElement('a', { href: '#', className: 'user-img' }),
-            _react2.default.createElement(
-              'div',
-              { className: 'info' },
-              _react2.default.createElement(
-                'a',
-                { href: '#' },
-                'James Doe '
-              ),
-              'shared a ',
-              _react2.default.createElement(
-                'a',
-                { href: '#' },
-                'story'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'media' },
-            _react2.default.createElement('div', { className: 'image', style: { background: 'url("https://res.cloudinary.com/practicaldev/image/fetch/s--lgZmvJZg--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q8novxdgkl806no68265.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' } })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'grey-container' },
-            _react2.default.createElement(
-              'div',
-              { className: 'update-info' },
-              _react2.default.createElement(
-                'h3',
-                null,
-                'How to become a developer'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'DIY wayfarers pinterest salvia plaid, hella ethical drinking vinegar slow-carb sustainable. Crucifix master cleanse quinoa godard.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'update-stats' },
-              _react2.default.createElement(
-                'div',
-                { className: 'icon-section' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'like-circle' },
-                  _react2.default.createElement('i', { className: 'fas fa-thumbs-up' })
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'other-users' },
-                'Sarah Russell and 23 others liked update'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'comments-stats' },
-                '4 comments'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'compose-comment' },
-              _react2.default.createElement('i', { className: 'fas fa-comment' }),
-              _react2.default.createElement('textarea', { name: true, rows: 8, cols: 70, defaultValue: "" }),
-              _react2.default.createElement(
-                'div',
-                { className: 'buttons' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'repost-btn' },
-                  _react2.default.createElement('i', { className: 'fas fa-redo' })
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'like-btn' },
-                  ' ',
-                  _react2.default.createElement('i', { className: 'fas fa-thumbs-up' })
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
+        return _this.props.initialData.latestPosts.map(function (item) {
+          var post = item.posts;
+          var user = item.users;
+
+          return _react2.default.createElement(
             'div',
             { className: 'update-container' },
             _react2.default.createElement(
               'div',
               { className: 'author-info' },
-              _react2.default.createElement('a', { href: '#', className: 'user-img' }),
+              _react2.default.createElement('a', { href: '#', className: 'user-img', style: { backgroundImage: 'url(\'' + user.profile_img + '\')' } }),
               _react2.default.createElement(
                 'div',
-                { className: 'info' },
+                { className: 'info', style: { position: 'relative', left: '10px' } },
                 _react2.default.createElement(
                   'a',
-                  { href: '#' },
-                  'James Doe '
+                  { href: '/profile' },
+                  user.first_name,
+                  ' ',
+                  _this.props.initialData.userInfo.last_name,
+                  ' '
                 ),
                 'shared a ',
                 _react2.default.createElement(
                   'a',
                   { href: '#' },
-                  'story'
+                  post.type == 'text' ? 'story' : 'image'
                 )
               )
             ),
             _react2.default.createElement(
               'div',
               { className: 'media' },
-              _react2.default.createElement('div', { className: 'image', style: { background: 'url("https://res.cloudinary.com/practicaldev/image/fetch/s--lgZmvJZg--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q8novxdgkl806no68265.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' } })
+              _react2.default.createElement('div', { className: '' + (post.type == 'text' ? 'story' : 'image'), style: { background: 'url("https://res.cloudinary.com/practicaldev/image/fetch/s--lgZmvJZg--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/i/q8novxdgkl806no68265.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' } })
             ),
             _react2.default.createElement(
               'div',
@@ -1337,7 +1154,7 @@ var Posts = function (_Component) {
                 _react2.default.createElement(
                   'p',
                   null,
-                  'DIY wayfarers pinterest salvia plaid, hella ethical drinking vinegar slow-carb sustainable. Crucifix master cleanse quinoa godard.'
+                  post.content
                 )
               ),
               _react2.default.createElement(
@@ -1385,8 +1202,24 @@ var Posts = function (_Component) {
                 )
               )
             )
-          )
-        )
+          );
+        });
+      }
+    };
+
+    _this.state = {
+      name: 'Joe'
+    };
+    return _this;
+  }
+
+  (0, _createClass3.default)(Posts, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'section',
+        { id: 'posts' },
+        this.showLatestPosts()
       );
     }
   }]);
@@ -1661,7 +1494,7 @@ var Layout = function (_Component) {
             'div',
             { className: 'testersec' },
             _react2.default.createElement(_ComposeSection2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
-            _react2.default.createElement(_Posts2.default, null)
+            _react2.default.createElement(_Posts2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData })
           )
         ),
         _react2.default.createElement(_Messenger2.default, null)
