@@ -18,7 +18,6 @@ export default class Home extends Component {
   
   componentWillMount(){
  
-    
         this.setState({
             initialData: this.props.initialData
         }, () => {
@@ -37,7 +36,7 @@ export default class Home extends Component {
   
     return (
     
-          <div className="testersec">
+        <div className="testersec">
           <ComposeSection initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
           <Posts initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
           </div>

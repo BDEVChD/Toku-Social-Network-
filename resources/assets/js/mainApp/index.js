@@ -55,15 +55,17 @@ class Layout extends Component {
         <LeftMenu initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
         <section id="content-container">
          <SearchHeader />
+        
          <Route exact path="/" component={(props) => <Home routeProps = {props}
          initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} /> } />
-
-        <Route exact path="/profile" component={(props) => <Profile routeProps = {props}
+             
+          
+          
+         
+          <Route exact path="/profile/:id" component={(props) => <Profile routeProps = {props}
          initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} /> } />
-          <div className="testersec">
-          
-          
-          </div>
+           <div className="testersec" > 
+        </div>
         </section>
        <Messenger />
       </div>
