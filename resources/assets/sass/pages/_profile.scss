@@ -1,5 +1,8 @@
 
 /** adding in the .app-container and .home-page class as a wrapper will break this css */
+
+
+
 .app-container.home-page .profile-page{
 
   
@@ -7,6 +10,7 @@
   // position: relative; 
   display: grid; 
   grid-template-columns: 1fr 3fr;
+ 
   .user-img{
     
     background: green;

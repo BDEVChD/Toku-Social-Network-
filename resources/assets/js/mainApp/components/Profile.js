@@ -72,14 +72,9 @@ export default class Profile extends Component {
             console.log(error)
           }
       }
-     
-      
   
 }
-    
-   
 
- 
   render () {
     if(this.state.userProfile !== undefined){
       return (

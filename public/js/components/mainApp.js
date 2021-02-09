@@ -977,7 +977,7 @@ var Messenger = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'user active', style: { display: 'flex', alignItems: 'center', padding: '10px' } },
+              { className: 'user', style: { display: 'flex', alignItems: 'center', padding: '10px' } },
               _react2.default.createElement('div', { className: 'user-img', style: { background: 'url("https://randomuser.me/api/portraits/men/97.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'relative', borderRadius: '50%', height: '30px', width: '30px' } }),
               _react2.default.createElement(
                 'div',
@@ -1009,7 +1009,7 @@ var Messenger = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'user active', style: { display: 'flex', alignItems: 'center', padding: '10px' } },
+              { className: 'user', style: { display: 'flex', alignItems: 'center', padding: '10px' } },
               _react2.default.createElement('div', { className: 'user-img', style: { background: 'url("https://randomuser.me/api/portraits/men/97.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'relative', borderRadius: '50%', height: '30px', width: '30px' } }),
               _react2.default.createElement(
                 'div',
@@ -1041,7 +1041,7 @@ var Messenger = function (_Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'user active', style: { display: 'flex', alignItems: 'center', padding: '10px' } },
+              { className: 'user', style: { display: 'flex', alignItems: 'center', padding: '10px' } },
               _react2.default.createElement('div', { className: 'user-img', style: { background: 'url("https://randomuser.me/api/portraits/men/97.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'relative', borderRadius: '50%', height: '30px', width: '30px' } }),
               _react2.default.createElement(
                 'div',

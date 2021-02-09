@@ -68,7 +68,7 @@ export default class Messenger extends Component {
                 <div className="user-name">James Doe</div>
                 <div className="conversation">  <i className="fas fa-comment-dots" /></div>
               </div>
-              <div className="user active" style={{display: 'flex', alignItems: 'center', padding: '10px'}}>
+              <div className="user" style={{display: 'flex', alignItems: 'center', padding: '10px'}}>
                 <div className="user-img" style={{background: 'url("https://randomuser.me/api/portraits/men/97.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'relative', borderRadius: '50%', height: '30px', width: '30px'}} />
                 <div className="user-name">James Doe</div>
                 <div className="conversation">  <i className="fas fa-comment-dots" /></div>
@@ -78,7 +78,7 @@ export default class Messenger extends Component {
                 <div className="user-name">James Doe</div>
                 <div className="conversation">  <i className="fas fa-comment-dots" /></div>
               </div>
-              <div className="user active" style={{display: 'flex', alignItems: 'center', padding: '10px'}}>
+              <div className="user" style={{display: 'flex', alignItems: 'center', padding: '10px'}}>
                 <div className="user-img" style={{background: 'url("https://randomuser.me/api/portraits/men/97.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'relative', borderRadius: '50%', height: '30px', width: '30px'}} />
                 <div className="user-name">James Doe</div>
                 <div className="conversation">  <i className="fas fa-comment-dots" /></div>
@@ -88,7 +88,7 @@ export default class Messenger extends Component {
                 <div className="user-name">James Doe</div>
                 <div className="conversation">  <i className="fas fa-comment-dots" /></div>
               </div>
-              <div className="user active" style={{display: 'flex', alignItems: 'center', padding: '10px'}}>
+              <div className="user" style={{display: 'flex', alignItems: 'center', padding: '10px'}}>
                 <div className="user-img" style={{background: 'url("https://randomuser.me/api/portraits/men/97.jpg")', backgroundPosition: 'center center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover', position: 'relative', borderRadius: '50%', height: '30px', width: '30px'}} />
                 <div className="user-name">James Doe</div>
                 <div className="conversation">  <i className="fas fa-comment-dots" /></div>

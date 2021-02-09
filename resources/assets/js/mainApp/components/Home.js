@@ -39,7 +39,7 @@ export default class Home extends Component {
         <div className="testersec">
           <ComposeSection initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
           <Posts initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
-          </div>
+        </div>
     )
     
   
