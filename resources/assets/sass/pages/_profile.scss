@@ -1,19 +1,31 @@
 
 /** adding in the .app-container and .home-page class as a wrapper will break this css */
-
+.app-container{
+  .content-container{
+    
+  
+ .tester-sec.profile-page{
+  width: 100%;
+ }
+ .messenger{
+   background: red; 
+ }
+}
+}
 
 
 .app-container.home-page .profile-page{
 
   
   // grid-template-columns: 15% 65% 20%;
-  // position: relative; 
+  position: relative; 
   display: grid; 
   grid-template-columns: 1fr 3fr;
  
   .user-img{
     
-    background: green;
+    background: yellow;
+    width:200px;
     
     
   }

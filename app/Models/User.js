@@ -19,7 +19,7 @@ class User extends Model {
         userInstance.password = await Hash.make(userInstance.password)
       }
     })
-  }
+  } 
 
   /**
    * A relationship on tokens is required for auth to

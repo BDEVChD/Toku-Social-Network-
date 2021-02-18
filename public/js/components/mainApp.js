@@ -1390,81 +1390,9 @@ var Profile = function (_Component) {
   (0, _inherits3.default)(Profile, _Component);
 
   function Profile() {
-    var _this2 = this;
-
     (0, _classCallCheck3.default)(this, Profile);
 
     var _this = (0, _possibleConstructorReturn3.default)(this, (Profile.__proto__ || Object.getPrototypeOf(Profile)).call(this));
-
-    _this.followUser = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
-      var _this$props$routeProp, match, location, history, profile_img, self, userProfile, _userProfile;
-
-      return _regenerator2.default.wrap(function _callee$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              _this$props$routeProp = _this.props.routeProps, match = _this$props$routeProp.match, location = _this$props$routeProp.location, history = _this$props$routeProp.history, profile_img = _this$props$routeProp.profile_img;
-              self = _this;
-
-              if (!_this.state.following) {
-                _context.next = 16;
-                break;
-              }
-
-              _context.prev = 3;
-              _context.next = 6;
-              return _axios2.default.get('/api/user/' + match.params.id + '/unfollow');
-
-            case 6:
-              userProfile = _context.sent;
-
-              self.setState({
-                following: !self.state.following
-              });
-              console.log(userProfile.data);
-              _context.next = 14;
-              break;
-
-            case 11:
-              _context.prev = 11;
-              _context.t0 = _context['catch'](3);
-
-
-              console.log(_context.t0);
-
-            case 14:
-              _context.next = 27;
-              break;
-
-            case 16:
-              _context.prev = 16;
-              _context.next = 19;
-              return _axios2.default.get('/api/user/' + match.params.id + '/follow');
-
-            case 19:
-              _userProfile = _context.sent;
-
-              self.setState({
-                following: !self.state.following
-              });
-              console.log(_userProfile.data);
-              _context.next = 27;
-              break;
-
-            case 24:
-              _context.prev = 24;
-              _context.t1 = _context['catch'](16);
-
-
-              console.log(_context.t1);
-
-            case 27:
-            case 'end':
-              return _context.stop();
-          }
-        }
-      }, _callee, _this2, [[3, 11], [16, 24]]);
-    }));
 
     _this.state = {
       name: 'Joe'
@@ -1476,101 +1404,191 @@ var Profile = function (_Component) {
   (0, _createClass3.default)(Profile, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
-
-      console.log(this.props);
       var _props$routeProps = this.props.routeProps,
           match = _props$routeProps.match,
           location = _props$routeProps.location,
-          history = _props$routeProps.history,
-          profile_img = _props$routeProps.profile_img;
+          history = _props$routeProps.history;
+
 
       var self = this;
 
       var getUser = function () {
-        var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2() {
+        var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee() {
           var userProfile;
-          return _regenerator2.default.wrap(function _callee2$(_context2) {
+          return _regenerator2.default.wrap(function _callee$(_context) {
             while (1) {
-              switch (_context2.prev = _context2.next) {
+              switch (_context.prev = _context.next) {
                 case 0:
-                  _context2.prev = 0;
-                  _context2.next = 3;
-                  return _axios2.default.get('/api/user/' + match.params.id);
+                  _context.prev = 0;
+                  _context.next = 3;
+                  return _axios2.default.get('/api/user/profile/${match.params.id}');
 
                 case 3:
-                  userProfile = _context2.sent;
+                  userProfile = _context.sent;
+
+                  console.log(self.props.initialData.userInfo['profile_img']);
 
                   self.setState({
                     initialData: self.props.initialData,
-                    userProfile: userProfile.data.user[0],
-                    following: userProfile.data.following
+                    userProfile: self.props.initialData.userInfo,
+                    first_name: self.props.initialData.userInfo['first_name'],
+                    last_name: self.props.initialData.userInfo['last_name'],
+                    profile_img: self.props.initialData.userInfo['profile_img']
 
-                  }, function () {
+                  }), function () {
                     console.log(self.state);
-                  });
+                  };
 
-                  _context2.next = 10;
+                  _context.next = 11;
                   break;
 
-                case 7:
-                  _context2.prev = 7;
-                  _context2.t0 = _context2['catch'](0);
+                case 8:
+                  _context.prev = 8;
+                  _context.t0 = _context['catch'](0);
 
+                  console.log(_context.t0);
 
-                  console.log(_context2.t0);
-
-                case 10:
+                case 11:
                 case 'end':
-                  return _context2.stop();
+                  return _context.stop();
               }
             }
-          }, _callee2, this, [[0, 7]]);
+          }, _callee, this, [[0, 8]]);
         }));
 
         return function getUser() {
-          return _ref2.apply(this, arguments);
+          return _ref.apply(this, arguments);
         };
       }();
+
       getUser();
     }
   }, {
     key: 'render',
     value: function render() {
-      if (this.state.userProfile !== undefined) {
-        return _react2.default.createElement(
+      // if(this.state.userProfile !== undefined){
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'testersec profile-page' },
+        _react2.default.createElement(
           'div',
-          { className: 'testersec profile-page' },
+          { className: 'user-img' },
+          _react2.default.createElement('img', { src: '' + this.state.profile_img })
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'info' },
           _react2.default.createElement(
-            'div',
-            { className: 'user-img' },
-            _react2.default.createElement('img', { src: '' + this.state.userProfile.profile_img })
+            'h1',
+            null,
+            this.state.first_name,
+            ' ',
+            this.state.last_name
           ),
           _react2.default.createElement(
             'div',
-            { className: 'info' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              this.state.userProfile.first_name + ' ' + this.state.userProfile.last_name
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'follow-btn', onClick: this.followUser },
-              this.state.following ? 'Unfollow' : 'Follow'
-            )
+            { className: 'follow-btn' },
+            'Follow'
           )
-        );
-      } else {
-        return _react2.default.createElement(
-          'div',
-          { className: 'testersec profile-page' },
-          'Loading'
-        );
-      }
+        )
+      );
     }
   }]);
   return Profile;
 }(_react.Component);
+
+/** 
+        console.log(this.props)
+        const {match, location, history, profile_img} = this.props.routeProps
+        const self = this
+
+        const getUser = async function(){
+          
+          try{
+            const user = await axios.get(`/api/user/profile/${match.params.id}`)
+            self.setState({
+              initialData: self.props.initialData, 
+              userProfile: userProfile.data[0],
+              // following: userProfile.data.following
+              
+             
+          }, () => {
+            console.log(self.state)
+          })
+
+          } catch(error){
+
+            console.log(error)
+          }
+  
+        }
+        getUser()
+    }
+
+    followUser =  async () => {
+      
+      const {match, location, history, profile_img} = this.props.routeProps
+      const self = this
+      if(this.state.following) {
+        try{
+          const userProfile = await axios.get(`/api/user/${match.params.id}/unfollow`)
+          self.setState({
+            following: !self.state.following
+          })  
+          console.log(userProfile.data)
+        } catch(error){
+  
+            console.log(error)
+          }
+      } else {
+        try{
+          const userProfile = await axios.get(`/api/user/${match.params.id}/follow`)
+          self.setState({
+            following: !self.state.following
+          })  
+          console.log(userProfile.data)
+        } catch(error){
+  
+            console.log(error) 
+          }
+      }
+  
+}
+
+  render () {
+    // if(this.state.userProfile !== undefined){
+      return (
+        <div className="testersec profile-page">
+          <div className="user-img"><img src="" /></div>
+          <div className="info">
+          <h1>Joe Santos</h1>
+          <div className="follow-btn">Follow</div>
+
+
+
+          </div>
+         
+          
+      
+         
+        </div>)
+      }
+    }
+    
+  
+  /**   
+     else {
+      return (  <div className="testersec profile-page">
+              <div className="user-img"><img src={`${this.state.userProfile.profile_img}`} /></div>
+<div className="info">
+  <h1>{`${this.state.userProfile.first_name} ${this.state.userProfile.last_name}`}</h1>
+  <div className="follow-btn" onClick={this.followUser}>{(this.state.following) ? 'Unfollow' : 'Follow'}</div>
+</div>
+</div>
+      )}
+  }} */
+
 
 exports.default = Profile;
 
@@ -1845,7 +1863,6 @@ var Layout = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'app-container home-page' },
-          _react2.default.createElement(_LoadingComp2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
           _react2.default.createElement(_LeftMenu2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
           _react2.default.createElement(
             'section',
@@ -1859,7 +1876,12 @@ var Layout = function (_Component) {
                 return _react2.default.createElement(_Profile2.default, { routeProps: props,
                   initialData: _this2.state.initialData == undefined ? 'loading' : _this2.state.initialData });
               } }),
-            _react2.default.createElement('div', { className: 'testersec' })
+            _react2.default.createElement(
+              'div',
+              { className: 'testersec' },
+              _react2.default.createElement(_ComposeSection2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData }),
+              _react2.default.createElement(_Posts2.default, { initialData: this.state.initialData == undefined ? 'loading' : this.state.initialData })
+            )
           ),
           _react2.default.createElement(_Messenger2.default, null)
         )

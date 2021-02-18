@@ -19,6 +19,8 @@ const Route = use('Route')
 
 Route.get('/', 'PageController.home')
 
+Route.get('/account', 'PageController.home')
+
 
 
 Route.get('/login', 'AuthController.login')
@@ -40,7 +42,7 @@ Route.get('/api/post/:id/delete', 'PostController.destroy')
 
 Route.get('/api/user/:id', 'UserController.profile')
 
-Route.get('/api/user/:id/follow', 'UserController.follow')
-Route.get('/api/user/:id/unfollow', 'UserController.unfollow')
+// Route.get('/api/user/:id/follow', 'UserController.follow')
+// Route.get('/api/user/:id/unfollow', 'UserController.unfollow')
 
 Route.any('*', ({view}) => view.render('pages/react'))

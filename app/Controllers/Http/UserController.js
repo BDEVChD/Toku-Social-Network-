@@ -7,15 +7,14 @@ class UserController {
     async profile ({auth, request, response}) {
     try{
         const user = await User.query().where('id', '=', request.params.id).fetch()
-        const following = await Database.from('followers').where({user_id: 1, follow_id: request.params.id})
+      
         
         console.log(user.toJSON())
         return {
             user: user.toJSON(), 
-            following: (following === undefined || following.length == 0) ? false : true,
-            userProfile: userProfile.data.user[0]
+            // following: (following === undefined || following.length == 0) ? false : true,
+            // userProfile: userProfile.data.user[0]
         }
-           
 
     } catch(error){
         console.log(error)

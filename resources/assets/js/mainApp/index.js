@@ -51,7 +51,7 @@ class Layout extends Component {
     return (
       <Router>
       <div className="app-container home-page">
-        <LoadingComp initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
+        {/* <LoadingComp initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/> */}
         <LeftMenu initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
         <section id="content-container">
          <SearchHeader />
@@ -62,6 +62,8 @@ class Layout extends Component {
           <Route exact path="/profile/:id" component={(props) => <Profile routeProps = {props}
          initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData} /> } />
            <div className="testersec" > 
+           <ComposeSection initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
+          <Posts initialData={(this.state.initialData == undefined) ? 'loading' : this.state.initialData}/>
         </div>
         </section>
        <Messenger />
