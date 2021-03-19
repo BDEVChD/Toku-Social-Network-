@@ -69,6 +69,7 @@
     "redux": "^3.6.0",
     "sass-loader": "^6.0.3",
     "standard": "^10.0.2",
+    "vinyl-fs": "^3.0.3",
     "webpack": "^2.5.1",
     "webpack-stream": "^3.2.0"
   },
@@ -78,7 +79,7 @@
   },
   "autoload": {
     "App": "./app"
-  }, 
+  },
   "engines": {
     "node": "4.1.0",
     "yarn": "1.22.10"
