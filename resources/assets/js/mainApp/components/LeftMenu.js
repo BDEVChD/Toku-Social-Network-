@@ -58,7 +58,7 @@ export default class LeftMenu extends Component {
             <div className="group">
               <div className="title">Pages(54)</div>
               <ul>
-                <li>Awards</li>
+                <li>Awardssss</li>
                 <li>Interactive Designs</li>
                 <li>InVision</li>
                 <li>Mashable</li>
