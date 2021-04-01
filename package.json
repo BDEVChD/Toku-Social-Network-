@@ -15,6 +15,9 @@
     "js": "gulp webpack",
     "preinstall": "npx npm-force-resolutions"
   },
+  "engines": {
+    "node": "15.10.0"
+  },
   "resolutions": {
     "**/graceful-fs": "^4.0.0"
   },
